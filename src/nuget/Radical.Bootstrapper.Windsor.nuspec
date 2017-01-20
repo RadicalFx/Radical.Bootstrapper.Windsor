@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Radical.Bootstrapper.Windsor</id>
+    <title>Radical.Bootstrapper.Windsor</title>
+    <version>$version$</version>
+    <authors>Mauro Servienti</authors>
+    <owners>radical,mauroservienti</owners>
+    <licenseUrl>https://github.com/RadicalFx/Radical.Bootstrapper.Windsor/blob/master/license</licenseUrl>
+    <projectUrl>https://github.com/RadicalFx/Radical.Bootstrapper.Windsor</projectUrl>
+    <iconUrl>http://www.radicalframework.com/img/radical-ico.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Radical Bootstrapper for Castle Windsor</description>
+    <summary />
+    <language>en-US</language>
+    <tags>Radical</tags>
+    <dependencies>
+      <dependency id="Radical" version="[1.6,2.0)" />
+      <dependency id="Radical.Bootstrapper" version="[2.0,3.0)" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\build\$configuration$\Radical.Bootstrapper.Windsor\lib\" target="lib\" />
+  </files>
+</package>
