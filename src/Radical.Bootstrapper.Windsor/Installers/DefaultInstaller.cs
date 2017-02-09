@@ -46,6 +46,15 @@ namespace Radical.Bootstrapper.Installers
 
             container.Register
             (
+                Types.FromAssemblyInDirectory(new AssemblyFilter(directory, filter))
+                    .IncludeNonPublicTypes()
+                    .Where(t => !boot.Conventions.IsExcluded(t) && boot.Conventions.IsComponent(t))
+                    .WithService.Select((type, baseTypes) => boot.Conventions.SelectComponentContracts(type))
+                    .LifestyleTransient()
+            );
+
+            container.Register
+            (
                 Types.FromAssemblyInDirectory( new AssemblyFilter( directory, filter ) )
                     .IncludeNonPublicTypes()
                     .Where( t => !boot.Conventions.IsExcluded( t ) && boot.Conventions.IsService( t ) )
